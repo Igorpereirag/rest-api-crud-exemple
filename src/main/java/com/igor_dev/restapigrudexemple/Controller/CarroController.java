@@ -44,9 +44,18 @@ public class CarroController {
 
 
     @PutMapping("/Carro/{id}")
-    public void updatecarro(@PathVariable long id){
-        repository.
-
-
+    public Carro atualizaCarro(@PathVariable long id, @RequestBody Carro novoCarro) {
+        Carro carroExistente = repository.findById(id).orElse(null);
+    
+        if (carroExistente != null) {
+            carroExistente.setMarca(novoCarro.getMarca()); // Substitua "marca" pelo atributo correto
+            carroExistente.setModelo(novoCarro.getModelo()); // Substitua "modelo" pelo atributo correto
+            // Adicione atualizações para outros atributos, se necessário.
+    
+            return repository.save(carroExistente);
+        } else {
+            return null; // Ou você pode lançar uma exceção ou tratar de outra forma se o carro não existir.
+        }
     }
+    
 }
