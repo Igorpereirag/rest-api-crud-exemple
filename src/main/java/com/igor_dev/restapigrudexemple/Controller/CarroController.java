@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.igor_dev.restapigrudexemple.Repositoy.CarroRepository;
+import com.igor_dev.restapigrudexemple.Repository.CarroRepository;
 import com.igor_dev.restapigrudexemple.model.Carro;
 
 import lombok.AllArgsConstructor;

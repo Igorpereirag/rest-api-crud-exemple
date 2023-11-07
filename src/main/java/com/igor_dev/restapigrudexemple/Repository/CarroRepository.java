@@ -1,4 +1,4 @@
-package com.igor_dev.restapigrudexemple.Repositoy;
+package com.igor_dev.restapigrudexemple.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
